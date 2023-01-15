@@ -55,6 +55,7 @@
 body {
   background: var(--white-color);
   font-family: var(--base-font-family);
+  overflow-x: hidden;
 }
 
 /*---------------------------------------
@@ -443,10 +444,7 @@ a:focus {
 
 .item {
   flex: 1;
-  height: 500px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: none;
+  max-height: 50%;
   transition: flex 0.8s ease;
 }
 
@@ -454,24 +452,10 @@ a:focus {
   flex: 6;
 }
 
-.item-1 {
-  background-image: url("/images/class/advanced.jpg");
-}
-
-.item-2 {
-  background-image: url("/images/class/basic.jpg");
-}
-
-.item-3 {
-  background-image: url("/images/class/premium.jpg");
-}
-
-.item-4 {
-  background-image: url("/images/class/advanced.jpg");
-}
-
-.item-5 {
-  background-image: url("http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4");
+.item video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 /*---------------------------------------
