@@ -449,12 +449,12 @@ a:focus {
 }
 
 .item:hover {
-  flex: 2;
+  flex: 1.1;
 }
 
 .item video {
   height: 100%;
-  width: 210px;
+  width: 100%;
   object-fit: contain;
 }
 
