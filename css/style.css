@@ -438,6 +438,7 @@ a:focus {
   -----------------------------------------*/
 .gallery-wrap {
   display: flex;
+  flex-flow: row wrap;
   flex-direction: row;
   width: 100%;
 }
@@ -454,7 +455,7 @@ a:focus {
 
 .item video {
   height: 100%;
-  width: 100%;
+  width: 200px;
   object-fit: contain;
 }
 
