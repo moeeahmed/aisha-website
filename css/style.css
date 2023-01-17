@@ -55,7 +55,6 @@
 body {
   background: var(--white-color);
   font-family: var(--base-font-family);
-  overflow-x: hidden;
 }
 
 /*---------------------------------------
@@ -375,24 +374,26 @@ a:focus {
   position: relative;
 }
 
-.thick-header-line:before {
-  left: -0.5rem;
-}
+@media screen and (min-width: 1200px) {
+  .thick-header-line:before {
+    left: -0.5rem;
+  }
 
-.thick-header-line:after {
-  right: -0.5rem;
-}
+  .thick-header-line:after {
+    right: -0.5rem;
+  }
 
-.thick-header-line::before,
-.thick-header-line::after {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 7rem;
-  height: 4px;
-  background-color: #fff;
-  top: 50%;
-  margin-bottom: -4px;
+  .thick-header-line::before,
+  .thick-header-line::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 7rem;
+    height: 4px;
+    background-color: #fff;
+    top: 50%;
+    margin-bottom: -4px;
+  }
 }
 
 /*---------------------------------------
