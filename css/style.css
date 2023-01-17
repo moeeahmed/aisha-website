@@ -448,10 +448,6 @@ a:focus {
   transition: flex 0.8s ease;
 }
 
-.item:hover {
-  flex: 1.1;
-}
-
 .item video {
   height: 100%;
   width: 100%;
@@ -479,6 +475,11 @@ a:focus {
 .about-working-hours strong {
   color: var(--white-color);
   opacity: 0.85;
+}
+
+.icons {
+  padding-right: 10px;
+  color: var(--white-color);
 }
 
 .profile-thumb {
