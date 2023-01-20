@@ -40,6 +40,10 @@ $(function () {
     moveToSelected($(this));
   });
 
+  $("#carousel div").on("swipeleft", function () {
+    alert("hi");
+  });
+
   $("#prev").click(function () {
     moveToSelected("prev");
   });

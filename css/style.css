@@ -437,6 +437,23 @@ a:focus {
 /*---------------------------------------
      PORTFOLIO GALLERY             
   -----------------------------------------*/
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 20px;
+}
+
+.item {
+  height: 600px;
+}
+
+.item video {
+  height: 100%;
+}
+
 #carousel {
   position: relative;
   height: 600px;
@@ -521,6 +538,20 @@ a:focus {
   width: 400px;
 }
 
+/**----- Scrollbar appearance -----**/
+::-webkit-scrollbar-track {
+  background-color: white;
+  border-radius: 10px;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--dark-color);
+}
+
 @media screen and (max-width: 767px) {
   .gallery {
     padding: 0;
@@ -574,6 +605,10 @@ a:focus {
 
   #carousel div.hideRight {
     transform: translateY(100%) translateX(-50%);
+  }
+
+  .item {
+    height: 400px;
   }
 }
 
@@ -640,6 +675,65 @@ a:focus {
 
 .profile-info .social-icon li {
   display: block;
+}
+
+/*---------------------------------------
+     BRAND SLIDER           
+  -----------------------------------------*/
+.brand-collabs {
+  padding: 0 !important;
+  padding-top: 5rem !important;
+  background-color: var(--dark-color);
+}
+
+.slider-parent {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  animation: slidein 30s linear infinite;
+  white-space: nowrap;
+}
+.slider .logos {
+  width: 100%;
+  display: inline-block;
+  margin: 0px 0px;
+  color: white;
+}
+
+.slider .logos img {
+  width: calc(100% / 5);
+  height: 70px;
+  animation: fade-in 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) forwards;
+}
+
+@keyframes slidein {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .slider {
+    animation: slidein 10s linear infinite;
+  }
+
+  .slider .logos .fab {
+    width: calc(100% / 4);
+  }
 }
 
 /*---------------------------------------
