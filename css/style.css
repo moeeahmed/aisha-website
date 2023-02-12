@@ -271,7 +271,7 @@ a:focus {
   fill: var(--white-color);
 }
 
-:hover {
+.navbar-brand svg:hover {
   fill: var(--primary-color);
 }
 
@@ -359,6 +359,10 @@ a:focus {
 .navbar-toggler .navbar-toggler-icon::after {
   top: 8px;
 }
+
+/*---------------------------------------
+     SPLASH SCREEN             
+  -----------------------------------------*/
 
 /*---------------------------------------
      HERO              
